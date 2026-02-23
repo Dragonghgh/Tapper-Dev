@@ -23,26 +23,25 @@ body {
 }
 
 .glass {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255,255,255,0.08);
   backdrop-filter: blur(15px);
   border-radius: 20px;
   padding: 20px;
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+  box-shadow: 0 0 30px rgba(0,255,255,0.15);
 }
 
-/* Stats */
 .stats {
   grid-column: 1 / 4;
   display: flex;
   justify-content: space-between;
 }
 
-.stats .label {
+.label {
   font-size: 0.8rem;
   opacity: 0.6;
 }
 
-/* Main Click Button */
+/* Main Button */
 .main {
   display: flex;
   justify-content: center;
@@ -54,21 +53,23 @@ body {
   height: 260px;
   border-radius: 50%;
   border: none;
-  background: radial-gradient(circle, #00ffe1, #0066ff);
-  color: #050505;
   font-size: 2rem;
   cursor: pointer;
-  box-shadow: 0 0 50px rgba(0, 255, 255, 0.8);
-  transition: transform 0.1s, box-shadow 0.1s;
-}
-
-.click-btn:hover {
-  box-shadow: 0 0 70px rgba(0, 255, 255, 1);
+  background: radial-gradient(circle, #00ffe1, #0066ff);
+  color: #050505;
+  box-shadow: 0 0 40px rgba(0,255,255,0.7);
+  animation: pulse 2s infinite;
 }
 
 .click-btn:active {
   transform: scale(0.92);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% { box-shadow: 0 0 40px rgba(0,255,255,0.6); }
+  50% { box-shadow: 0 0 80px rgba(0,255,255,1); }
+  100% { box-shadow: 0 0 40px rgba(0,255,255,0.6); }
 }
 
 /* Upgrades */
@@ -80,25 +81,34 @@ body {
   width: 100%;
   margin-top: 10px;
   padding: 15px;
-  background: linear-gradient(135deg, #222, #111);
-  border: 1px solid #00ffe1;
   border-radius: 12px;
+  border: 1px solid #00ffe1;
+  background: linear-gradient(135deg, #222, #111);
   color: white;
   cursor: pointer;
-  transition: transform 0.15s, background 0.15s;
+  transition: 0.15s;
 }
 
 .upgrade:hover {
-  transform: translateY(-2px);
   background: linear-gradient(135deg, #00ffe1, #0066ff);
   color: #050505;
-}
-
-.upgrade span {
-  font-size: 0.8rem;
 }
 
 .locked {
   opacity: 0.4;
   pointer-events: none;
+}
+
+/* Floating numbers */
+.float {
+  position: absolute;
+  color: #00ffe1;
+  font-size: 1.2rem;
+  pointer-events: none;
+  animation: floatUp 1s forwards;
+}
+
+@keyframes floatUp {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-40px); }
 }
