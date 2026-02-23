@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Neon Clicker</title>
 
   <!-- Font -->
@@ -14,7 +14,7 @@
 
   <div class="game">
 
-    <!-- Top Stats Bar -->
+    <!-- Top Stats -->
     <div class="stats glass">
       <div>
         <span class="label">Points</span><br>
@@ -26,14 +26,12 @@
       </div>
     </div>
 
-    <!-- Main Click Area -->
+    <!-- Main Button -->
     <div class="main">
-      <button id="clickBtn" class="click-btn">
-        TAP
-      </button>
+      <button id="clickBtn" class="click-btn">TAP</button>
     </div>
 
-    <!-- Upgrades Panel -->
+    <!-- Upgrades -->
     <div class="upgrades glass">
       <h2>Upgrades</h2>
 
@@ -42,12 +40,19 @@
         <span id="upgradeCost">Cost: 10</span>
       </button>
 
+      <button id="autoClicker" class="upgrade locked">
+        Auto Tapper<br>
+        <span id="autoCost">Cost: 50</span>
+      </button>
+
+      <button id="muteBtn" class="upgrade">
+        🔊 Sound: ON
+      </button>
     </div>
 
   </div>
 
-  <!-- JavaScript (ALWAYS at bottom) -->
+  <!-- JS -->
   <script src="script.js"></script>
-
 </body>
 </html>
