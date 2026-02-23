@@ -3,46 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <title>Neon Clicker</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div class="game">
 
-    <!-- Top Stats -->
+    <!-- Top Stats Bar -->
     <div class="stats glass">
       <div>
-        <span class="label">Points</span>
+        <span class="label">Points</span><br>
         <span id="points">0</span>
       </div>
       <div>
-        <span class="label">Per Second</span>
+        <span class="label">Per Second</span><br>
         <span id="pps">0</span>
       </div>
     </div>
 
-    <!-- Main Area -->
+    <!-- Main Click Area -->
     <div class="main">
       <button id="clickBtn" class="click-btn">
         TAP
       </button>
     </div>
 
-    <!-- Upgrades -->
+    <!-- Upgrades Panel -->
     <div class="upgrades glass">
       <h2>Upgrades</h2>
-      <button class="upgrade">
-        +1 Per Click<br>
-        <span>Cost: 10</span>
+
+      <button id="upgradeClick" class="upgrade locked">
+        Power Click<br>
+        <span id="upgradeCost">Cost: 10</span>
       </button>
-      <button class="upgrade locked">
-        Auto Tapper<br>
-        <span>Cost: 50</span>
-      </button>
+
     </div>
 
   </div>
+
+  <!-- JavaScript (ALWAYS at bottom) -->
+  <script src="script.js"></script>
 
 </body>
 </html>
